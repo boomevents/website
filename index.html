@@ -58,7 +58,7 @@
         var container = new PIXI.Container();
         app.stage.addChild(container);
 
-       PIXI.loader.add("ripple.png").add("img/l1.jpg").load(setup);
+       PIXI.loader.add("ripple.png").add("img/l1.webp").load(setup);
 
       // In the ‘setup’ function the displacement sprite is created
       // that will create the effect and this is added to a displacement filter.
@@ -79,7 +79,7 @@
             container.filters = [displacementFilter];
             displacementFilter.scale.x = 0;
             displacementFilter.scale.y = 0;
-            bg = new PIXI.Sprite(PIXI.loader.resources["img/l1.jpg"].texture);
+            bg = new PIXI.Sprite(PIXI.loader.resources["img/l1.webp"].texture);
             bg.width = app.renderer.width;
             bg.height = app.renderer.height;
             container.addChild(bg);
