@@ -60,6 +60,7 @@ LANDING
     justify-content: center;
     flex-direction:column;
     background: url("img/l1.webp") center/cover;
+    position:relative;
 }
  .l-img,
 canvas{
