@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;0,700;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Jost', sans-serif;
+}
+
+/*---------------
+GLOBALS
+-----------------*/
+
+:root {
+    --main-color: #9e22cf;
+    --main-strong: #7b10a5;
+    --main-light: #bd5be4;
+}
+.flexcenter{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+}
+.container{
+    width: 80%;
+    min-width:800px;
+    margin: auto;
+}
+.backdrop{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index:100;
+}
+
+/*---------------
+LANDING
+-----------------*/
+
+#landing{
+    height:100vh;
+    width:100%;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+.l-img,
+canvas{
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-2;
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, rgba(233, 69, 4, 0.55), rgba(0, 9, 40, 0.6), rgba(6, 171, 177, 0.6));
+    z-index:-1;
+    top:0;
+    left:0;
+}
+.boat-logo{
+    z-index: 3;
+    height: 250px;
+    -webkit-filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.801) );
+    filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.747));
+    position: relative;
+    margin-left:1.5rem;
+} 
+.para{
+    width: 800px;
+    margin-bottom: 1.5rem;
+    color:#fff;
+    font-size:1.2rem;
+    text-align: center;
+}
+h1{
+    color:#fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size:3rem;
+}
+.order-button{
+    background: rgb(57, 255, 231);
+    padding: 1.3rem 3.5rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    box-shadow: 0 0 100px 0 #010f1e;
+    transition: background 350ms;
+}
+.order-button:hover{
+    background: #fff;
+}
+.social-links a img{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.social-links{
+    margin-top:4rem;
+}
+.social-links a{
+    margin:0 10px;
+}
+
+@media(max-width:650px){
+    .para{
+        width: 90%;
+    }
+  
+}
