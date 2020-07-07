@@ -42,13 +42,13 @@ section{
     min-width:800px;
     margin: auto;
 }
-.backdrop{
+/* .backdrop{
   height: 100%;
   width: 100%;
   position: fixed;
   z-index:100;
 }
-
+ */
 /*---------------
 LANDING
 -----------------*/
@@ -62,7 +62,7 @@ LANDING
     justify-content: center;
     flex-direction:column;
 }
-.l-img,
+ .l-img,
 canvas{
     object-fit:cover;
     width: 100%;
@@ -71,15 +71,15 @@ canvas{
     top:0;
     left:0;
     z-index:-2;
-}
+} 
 .overlay{
     position: absolute;
     height: 100%;
     width: 100%;
     background: linear-gradient(45deg, rgba(233, 69, 4, 0.55), rgba(0, 9, 40, 0.6), rgba(6, 171, 177, 0.6));
-    z-index:-1;
     top:0;
     left:0;
+    z-index:-1;
 }
 .boat-logo{
     z-index: 3;
