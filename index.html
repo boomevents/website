@@ -28,19 +28,75 @@
     <meta property="twitter:image" content="https://determined-thompson-5556c8.netlify.app/img/boat-logo.png">
 </head>
 <body>
-
-<section id="landing">
+<div class="video-backdrop hide">
+    <img alt="close icon" class="close-video-button" src="img/SVG/closev.svg"> 
+    <video id="ytplayer" type="text/html" style="position:absolute; top:0px; left:0px; bottom:0px; right:0; margin:auto; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:20;" src="img/video.mp4" frameborder="0" allowfullscreen muted></video>
+</div>
+<div class="alert">
+  <img src="img/SVG/close.svg" class="close">
+  <p>Wanna know how last week's PARTY BOOM BOAT looked like?</p>
+  <button class="play-button"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 0 477.886 477.886" style="enable-background:new 0 0 477.886 477.886;" xml:space="preserve">
+ <g>
+   <g>
+     <path d="M476.091,231.332c-1.654-3.318-4.343-6.008-7.662-7.662L24.695,1.804C16.264-2.41,6.013,1.01,1.8,9.442
+       c-1.185,2.371-1.801,4.986-1.8,7.637v443.733c-0.004,9.426,7.633,17.07,17.059,17.075c2.651,0.001,5.266-0.615,7.637-1.8
+       L468.429,254.22C476.865,250.015,480.295,239.768,476.091,231.332z"/>
+   </g>
+ </g>
+ </svg>
+ Play video</button>
+</div>
+<section class="blur" id="landing">
 <!-- <img src="img/l1.webp" class="landing-1 l-img"> -->
 <div class="overlay"></div> 
 <img class="boat-logo" src="img/boat-logo.png">
-<p class="para">Every wednesday departing from Medulin riva at 17:00 H<br><!--  5 hours non stop party including 2 hours partying on private island! --></p>
-<a target="_blank" class="order-button" href="https://www.entrio.hr/event/party-boom-boat-5h-non-stop-party-8047">Order ticket</a>
+<p class="para">Every Sunday and Wednesday departing from Medulin riva at 17:00 H<br><!--  5 hours non stop party including 2 hours partying on private island! --></p>
+<a target="_blank" class="order-button" href="https://www.entrio.hr/en/event/party-boom-boat-5h-non-stop-party--8117">Check availability</a>
 <div class="social-links">
   <a target="_blank" href="https://www.facebook.com/BOOMeventsPula/"><img src="/img/SVG/facebook.svg"></a>
   <a target="_blank" href="https://www.instagram.com/instaboom.pula/"><img src="/img/SVG/instagram.svg"></a>
-<!--   <a href="https://www.facebook.com/BOOMeventsPula/"><img src="/img/SVG/facebook.svg"></a> -->
+  <a target="_blank" href="https://www.google.com/maps/place/Osipovica+30,+52203,+Medulin/data=!4m2!3m1!1s0x47632bf732904735:0x101c9da985abef40?sa=X&ved=2ahUKEwi3p4uZtsrqAhUMjosKHXsUCm0Q8gEwAHoECAsQAQ"><img src="/img/SVG/pin.svg"></a> 
 
 </div>
 </section>
+<script>
+
+   //prikazi cookoie popup ako nije vec prihvaceno
+   videoPopup = document.querySelector(".alert");
+   videoPopup.querySelector(".close").addEventListener("click", closePopup);
+   var showCookie = document.cookie;
+/* 
+   if(showCookie.match(/^(.*;)?\s*popup\s*=\s*[^;]+(.*)?$/)){
+       closePopup();
+   } */
+
+   function closePopup(){
+       videoPopup.classList.add("hide");
+       document.cookie = "popup=hide";
+       document.getElementById("landing").classList.remove("blur");
+   }
+
+
+
+
+    document.querySelector(".play-button").addEventListener("click", function(){
+          document.querySelector(".video-backdrop").classList.remove("hide");
+          document.querySelector("#ytplayer").play();
+        
+        closePopup();
+    })
+    document.querySelector(".close-video-button").addEventListener("click", function(){
+        document.querySelector(".video-backdrop").classList.add("hide");
+        document.querySelector("#ytplayer").stop();
+
+    });
+
+    function onPlayerReady() {
+        /* player.playVideo(); */
+        // Mute!
+        player.mute();
+    }
+</script>
 </body>
 </html>
