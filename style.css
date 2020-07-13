@@ -200,6 +200,16 @@ h1{
 .hide{
     display:none;
 }
+#ytplayer{
+    transform: rotate(90deg);
+
+  transform-origin: bottom left;
+  width: 100vh;
+  height: 100vw;
+  margin-top: -100vw;
+  object-fit: cover;
+
+}
 
  @-webkit-keyframes swing-in-bottom-fwd {
     0% {
