@@ -10,6 +10,7 @@ html{
 }
 body{
     font-family: 'Jost', sans-serif;
+    overflow:hidden;
 }
 
 /*---------------
@@ -66,7 +67,7 @@ LANDING
 #landing.blur{
     -webkit-animation: set-blur 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
     animation: set-blur 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-    animation-delay: 9.7s;
+    animation-delay: 5.6s;
 }
  .l-img,
 canvas{
@@ -175,7 +176,7 @@ h1{
     text-align: center;
     -webkit-animation: swing-in-bottom-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
     animation: swing-in-bottom-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-    animation-delay: 10s;
+    animation-delay: 6s;
 }
 
 .close-video-button{
@@ -201,8 +202,7 @@ h1{
     display:none;
 }
 #ytplayer{
-    transform: rotate(90deg);
-
+ transform: rotate(90deg);
   transform-origin: bottom left;
   width: 100vh;
   height: 100vw;
