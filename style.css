@@ -202,11 +202,12 @@ h1{
     display:none;
 }
 #ytplayer{
- transform: rotate(90deg);
+    position: fixed;
+ top:0;
+ left:0;
   transform-origin: bottom left;
-  width: 100vh;
-  height: 100vw;
-  margin-top: -100vw;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
 
 }
@@ -269,5 +270,15 @@ h1{
     .para{
         width: 90%;
     }
-  
+    #ytplayer{
+        position: fixed;
+     transform: rotate(90deg);
+      transform-origin: bottom left;
+      width: 100vh;
+      height: 100vw;
+      margin-top: -100vw;
+      object-fit: cover;
+    
+    }
+    
 }
