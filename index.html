@@ -77,19 +77,19 @@
        document.getElementById("landing").classList.remove("blur");
    }
 
-
+   let video = document.querySelector("#ytplayer");
 
 
     document.querySelector(".play-button").addEventListener("click", function(){
           document.querySelector(".video-backdrop").classList.remove("hide");
-          document.querySelector("#ytplayer").play();
+          video.play();
         
         closePopup();
     })
     document.querySelector(".close-video-button").addEventListener("click", function(){
         document.querySelector(".video-backdrop").classList.add("hide");
-        document.querySelector("#ytplayer").pause();
-
+        video.pause();
+        video.src="";
     });
 
  
